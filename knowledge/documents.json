@@ -1,0 +1,50 @@
+[
+  {
+    "id": "nusaeval-overview",
+    "title": "NusaEval AI: Benchmark Model untuk Tugas Praktis Indonesia",
+    "category": "AI & Data",
+    "year": "2026",
+    "uri": "https://github.com/zainalanwar/agent-search-portfolio",
+    "content": "NusaEval AI adalah benchmark terbuka dan reproducible untuk mengevaluasi frontier dan open language models pada tugas praktis Indonesia. Project ini menghasilkan dataset publik, respons model, telemetry biaya dan latensi, laporan evaluasi, serta dashboard interaktif. Arsitekturnya memproses benchmark JSONL melalui budget guard sebelum inference, menyimpan raw result JSONL, menjalankan pemeriksaan deterministik dan rubric-based judging, lalu membangun dashboard dan laporan yang tetap dapat digunakan setelah resource cloud dihentikan. Fokus utamanya adalah evaluasi yang relevan untuk konteks Bahasa Indonesia, transparan, dan dapat direproduksi."
+  },
+  {
+    "id": "nusaeval-pilot-results",
+    "title": "NusaEval AI: Hasil Pilot Delapan Model",
+    "category": "AI & Data",
+    "year": "2026",
+    "uri": "https://github.com/zainalanwar/agent-search-portfolio",
+    "content": "Pilot NusaEval menghasilkan 160 respons sukses dari delapan model dan 20 kasus pengujian tanpa failed request. Kategori evaluasi mencakup code, customer service, grounding, instruction following, reasoning, safety, SME operations, dan writing. Estimasi total inference spend adalah 0.39273 dolar AS. Skor menggunakan pemeriksaan deterministik untuk required facts, forbidden claims, dan strict output formats. Hasil tersebut berguna untuk reproducibility tetapi tidak menggantikan human review dan rubric-based judging. Google Cloud billing export tetap menjadi sumber kebenaran untuk biaya aktual."
+  },
+  {
+    "id": "cost-controlled-cloud",
+    "title": "Arsitektur Cloud dengan Kontrol Biaya",
+    "category": "Product",
+    "year": "2026",
+    "uri": "https://github.com/zainalanwar/agent-search-portfolio",
+    "content": "Pendekatan kontrol biaya dimulai dari isolasi setiap eksperimen ke project GCP khusus, mengaktifkan hanya API minimum, dan memasang budget berdasarkan gross spend sebelum kredit agar penggunaan tetap terlihat. Batch inference memerlukan spend ceiling eksplisit dan berhenti sebelum permintaan berikutnya jika estimasi melewati batas. Billing report dapat mengalami keterlambatan sehingga guardrail lokal, quota, dan prosedur shutdown tetap diperlukan. Untuk Agent Search Portfolio, project menggunakan budget bulanan Rp250.000 dengan alert pada 25, 50, 90, dan 100 persen serta tidak menggunakan Compute Engine, Cloud Storage, atau BigQuery untuk ingestion."
+  },
+  {
+    "id": "agent-search-portfolio",
+    "title": "Agent Search Portfolio: Evidence-First Knowledge Search",
+    "category": "AI & Data",
+    "year": "2026",
+    "uri": "https://github.com/zainalanwar/agent-search-portfolio",
+    "content": "Agent Search Portfolio mengubah materi project menjadi pengalaman pencarian berbasis bukti. Knowledge base berisi dokumen publik terkurasi yang diimpor langsung melalui Discovery Engine API tanpa bucket. Search app menggunakan Enterprise search tier dan generative response add-on agar pertanyaan natural language dapat menghasilkan jawaban yang grounded pada sumber. Aplikasi menampilkan ringkasan, sitasi, potongan sumber, kategori project, dan link pembuktian. Backend menyimpan autentikasi Google Cloud di sisi server sehingga kredensial tidak pernah dikirim ke browser."
+  },
+  {
+    "id": "workflow-automation",
+    "title": "Workflow Automation dengan n8n dan API",
+    "category": "Automation",
+    "year": "2026",
+    "uri": "https://github.com/zainalanwar/agent-search-portfolio",
+    "content": "Workflow automation dirancang dengan n8n untuk menghubungkan trigger, API eksternal, transformasi data, validasi, dan observability. Pola implementasinya memisahkan credential dari workflow JSON, memakai idempotency untuk operasi tulis, menyediakan error path, dan memvalidasi output setiap node sebelum aktivasi. Contoh penggunaan mencakup health monitoring, orchestrated AI tasks, content pipelines, dan pemeriksaan endpoint terjadwal. Workflow produksi selalu dicadangkan atau dibuat salinannya sebelum perubahan dilakukan."
+  },
+  {
+    "id": "product-delivery",
+    "title": "Digital Product Delivery dari Riset hingga Verifikasi",
+    "category": "Product",
+    "year": "2026",
+    "uri": "https://github.com/zainalanwar/agent-search-portfolio",
+    "content": "Pendekatan product delivery menghubungkan riset pengguna, perancangan informasi, implementation, dan verifikasi. Untuk aplikasi frontend, pengalaman utama dibangun sebagai layar pertama, bukan landing page yang menjanjikan fitur di masa depan. Setiap control harus memiliki state yang nyata, desain diuji pada desktop dan mobile, dan layanan provider diuji end-to-end. Dokumentasi operasional mencatat arsitektur, command reproduksi, biaya, batasan, dan shutdown procedure supaya project dapat dipelihara serta dipresentasikan sebagai portfolio yang kredibel."
+  }
+]
