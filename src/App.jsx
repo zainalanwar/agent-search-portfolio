@@ -136,7 +136,7 @@ function App() {
         <div className="top-actions">
           <span className="live-status">
             <span aria-hidden="true" />
-            Live
+            {answer.synthetic ? "Contoh" : status === "error" ? "Koneksi bermasalah" : "Hasil pencarian"}
           </span>
           <a className="text-button" href="#search">
             <Sparkles size={17} />
@@ -266,7 +266,7 @@ function App() {
               </div>
               <div>
                 <dt>Guardrail</dt>
-                <dd>Budget biaya kotor Rp250.000/bulan</dd>
+                <dd>Peringatan budget Rp250.000/bulan; bukan batas otomatis</dd>
               </div>
             </dl>
             <a

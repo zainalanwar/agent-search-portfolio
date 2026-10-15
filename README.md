@@ -50,3 +50,13 @@ commit the service account JSON.
 
 Google Cloud budgets alert but do not automatically stop usage. Disable billing
 or delete the project when the portfolio search is no longer needed.
+
+## Demo and verification status
+
+The initial answer in the UI is a synthetic example. It is labelled as an example
+and does not prove a live cloud request has succeeded. The status label changes
+when a search response is received. Budget alerts do not cap spend.
+
+This AI-assisted project demonstrates an integration approach. Confirm the cloud
+configuration and inspect source documents before claiming deployment results,
+adoption or independent authorship.
